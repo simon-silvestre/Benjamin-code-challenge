@@ -1,0 +1,35 @@
+.Content {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0 85px 0;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 50px;
+
+
+        .top {
+            max-width: 510px;
+
+            img {
+                margin-bottom: 24px;
+            }
+    
+            h1 {
+                margin-bottom: 8px;
+            }
+    
+            p {
+                max-width: 422px;
+            }
+        }
+            
+         .bottom {
+            font-size: 230px;
+            padding-right: 50px;
+            line-height: 168px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'GT-Ultra';
+    font-weight: bold;
+    src: url("../../public/Font/GT-Ultra-Standard-Bold-Trial.otf") format("opentype");
+}
+
+$text: #FFF38A;
+$background: #060447;
+$loading: #827B68;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: $text;
+    background-color: $background;
+    margin: 0 50px;
+}
+
+p {
+    font-weight: lighter;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48,7px;
+}
+
+span {
+    font-family: 'GT-Ultra';
+}
