@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Content({ logo, img, title, text, date }) {
+function Content({ logo, index, title, text, date }) {
     return (
         <div className="Content">
             <div className="left">
@@ -12,7 +12,11 @@ function Content({ logo, img, title, text, date }) {
                 <span className='bottom'>{date}</span>
             </div>
             <div className="right">
-                <img src={img} alt="illustration" />
+                <div className="images" style={index === 1 ? {transform: 'translate(-422px)'} : index === 2 ? {transform: 'translate(-844px)'} : {transform: 'translate(0)'}}>
+                    <img src='Images/image1.png' alt="illustration" />
+                    <img src='Images/image2.png' alt="illustration" />
+                    <img src='Images/image3.png' alt="illustration" />
+                </div>
             </div>
         </div>
     )

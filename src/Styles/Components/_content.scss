@@ -32,4 +32,18 @@
             line-height: 168px;
         }
     }
+
+    .right {
+        position: relative;
+        overflow: hidden;
+        min-width: 422px;
+        max-width: 422px;
+        height: 604px;
+
+        .images {
+            display: flex;
+            width: 300%;
+            transition: all .4s ease-in-out;
+        }
+    }
 }
