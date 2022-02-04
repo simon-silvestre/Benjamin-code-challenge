@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Content from './Components/Content';
+import Nav from './Components/Nav';
 
 function App() {
 
@@ -27,7 +28,19 @@ function App() {
     }
   ])
 
-  const [index] = useState(0)
+  const [index, setIndex] = useState(0)
+
+  function setIndexPlus() {
+    if(index < data.length - 1) {
+      setIndex(index + 1)
+    }
+  }
+
+  function setIndexMoins() {
+    if(index > 0) {
+      setIndex(index - 1)
+    }
+  }
 
   return (
     <div className="App">
@@ -39,23 +52,11 @@ function App() {
           date={data[index].date}
         />
 
-      <div className="nav">
-        <div className="arrows">
-          <img src="Images/leftArrow.png" alt="" className="left" />
-          <img src="Images/rightArrow.png" alt="" className="right" />
-        </div>
-
-        <div className="navBar">
-          <div className="progressBar">
-            <span className="bar"></span>
-          </div>
-          <span className="checkpoint"></span>
-          <span className="checkpoint"></span>
-          <span className="checkpoint"></span>
-          <span className="checkpoint"></span>
-          <span className="checkpoint"></span>
-        </div>
-      </div>
+      <Nav 
+        index={index}
+        setIndexPlus={setIndexPlus}
+        setIndexMoins={setIndexMoins}
+      />
     </div>
   );
 }
