@@ -6,17 +6,16 @@
     .arrows {
         svg {
             cursor: pointer;
-
-            &:hover path {
-                fill: $loading;
+            
+            path {
+                transition: all .4s ease-in-out;
             }
         }
         svg:nth-child(1) {
             margin-right: 45px;
-
-            path {
-                fill: $loading;
-            }
+        }
+        svg.active path {
+            fill: $loading;
         }
     }
 
